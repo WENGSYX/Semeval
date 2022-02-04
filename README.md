@@ -1,8 +1,8 @@
 # Semeval 2022
 
 #### In this folder, the solution of semeval is stored
-
-### TASK LIST
+#### 在本存储库中，包含着Semeval 2022部分任务的代码
+### TASK LIST（任务列表）
 
 - [TASK1](https://github.com/WENGSYX/Semeval/tree/main/1)
 - [TASK3](https://github.com/WENGSYX/Semeval/tree/main/3)
