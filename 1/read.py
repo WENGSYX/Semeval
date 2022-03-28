@@ -18,12 +18,16 @@ for file in os.listdir('test'):
         except:
             pass
 
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained('mdeberta')
+data1 = []
+data2 = []
+for i in datas:
+    if len(tokenizer(i).input_ids) < 32:
+        data1.append(i)
+    else:
+        data2.append(i)
 
-datas = []
-for file in os.listdir('train'):
-    with open('train/'+file,'r',encoding='utf-8') as f:
-        data = json.load(f)
-    gloss = []
-
-    for d in data:
-        datas.append(d['gloss'])
+import pandas as pd
+pd.to_pickle(data1,'datas1.pk')
+pd.to_pickle(data2,'datas2.pk')
